@@ -1,13 +1,25 @@
-import 'package:fitness_app/pages/welcome.dart';
+import 'package:covid_tracker/views/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.dark,
+      )  
+    );
+    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Fitness App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -15,7 +27,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0XFF233C63),
         fontFamily: 'Poppins',
       ),
-      home: Welcome(),
+      home: new Welcome(),
     );
   }
 }

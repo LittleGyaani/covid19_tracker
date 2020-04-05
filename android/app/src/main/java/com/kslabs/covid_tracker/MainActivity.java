@@ -1,4 +1,4 @@
-package com.example.fitness_app;
+package com.kslabs.covid_tracker;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
