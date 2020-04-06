@@ -1,10 +1,13 @@
-import 'package:covid_tracker/views/welcome.dart';
+//Core Library Imports
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+//Main Library Imports
+import 'package:covid_tracker/views/welcome.dart';
 
-class MyApp extends StatelessWidget {
+void main() => runApp(new Covid19TrackerApp());
+
+class Covid19TrackerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
@@ -18,13 +21,13 @@ class MyApp extends StatelessWidget {
       )  
     );
     
-    return MaterialApp(
+    return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fitness App',
-      theme: ThemeData(
+      title: 'COVID19 Tracker App',
+      theme: new ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: Color(0XFF6D3FFF),
-        accentColor: Color(0XFF233C63),
+        primaryColor: new Color(0XFF6D3FFF),
+        accentColor: new Color(0XFF233C63),
         fontFamily: 'Poppins',
       ),
       home: new Welcome(),
